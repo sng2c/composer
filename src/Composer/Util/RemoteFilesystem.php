@@ -63,6 +63,7 @@ class RemoteFilesystem
             $this->options = $this->getTlsDefaults($options);
         } else {
             $this->disableTls = true;
+            $this->options = array('ssl'=>array('verify_peer'=>false));
         }
 
         // handle the other externally set options normally.
